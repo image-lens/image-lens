@@ -28,6 +28,9 @@
 		"url": "https://github.com/kirillovmr/image-lens/issues"
 	},
 	"devDependencies": {
+		"@babel/preset-env": "^7.22.20",
+		"@rollup/plugin-babel": "^6.0.3",
+		"@rollup/plugin-terser": "^0.4.3",
 		"rollup": "^3.29.4",
 		"vite": "^4.4.9",
 		"zx": "^7.2.3"

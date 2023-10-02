@@ -7,7 +7,6 @@
 	</head>
 
 	<body>
-		<!-- <img id="image" src="img1.jpeg" alt="" /> -->
 		<div>
 			<img id="image" src="img1.jpeg" alt="" />
 			<div>
@@ -22,10 +21,12 @@
 			</div>
 		</div>
 
-		<script type="module">
-			import ImageLens from '../src/index.js'
+		<script src="./ImageLens.min.js"></script>
 
-			window.ImageLens = ImageLens
+		<script type="module">
+			// import ImageLens from '../src/index.js'
+			// window.ImageLens = ImageLens
+
 			window.il = new ImageLens()
 
 			const canvas = window.il.init(

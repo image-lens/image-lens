@@ -1,1 +1,1 @@
-# image-lens
+# ImageLens 1.0.0

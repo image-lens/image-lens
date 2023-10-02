@@ -3,7 +3,7 @@ import * as privateMethods from './ImageLensPrivate'
 import * as handlers from './ImageLensHandlers'
 
 export class ImageLens {
-	static version = '0.0.1'
+	static version = '1.0.0'
 
 	/** @type {string} Id of the image to initialize ImageLens to */
 	#imageId
