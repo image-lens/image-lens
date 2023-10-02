@@ -2,9 +2,10 @@
 	"name": "image-lens",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "dist/ImageLens.js",
+	"browser": "dist/ImageLens.min.js",
 	"author": "Viktor Kirillov (https://kirillovmr.com)",
-	"types": "image-lens.d.ts",
+	"types": "ImageLens.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kirillovmr/image-lens.git"
