@@ -1,6 +1,6 @@
 {
 	"name": "image-lens",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "dist/ImageLens.js",
 	"browser": "dist/ImageLens.min.js",
@@ -13,7 +13,8 @@
 	"homepage": "https://github.com/kirillovmr/image-lens#readme",
 	"scripts": {
 		"dev": "vite sandbox",
-		"build": "zx tools/build.mjs"
+		"build": "zx tools/build.mjs",
+		"purge-jsdelivr": "zx tools/purge-jsdelivr.mjs"
 	},
 	"prettier": {
 		"printWidth": 120,

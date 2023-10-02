@@ -1,3 +1,4 @@
 node_modules
 .bin
 sandbox/*.min.js
+.DS_Store

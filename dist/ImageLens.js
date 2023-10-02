@@ -1,5 +1,5 @@
 /*!
-* ImageLens v1.0.0
+* ImageLens v1.0.1
 * GitHub: https://github.com/kirillovmr/image-lens#readme
 * Released under the MIT License.
 * (c) 2023 Viktor Kirillov (https://kirillovmr.com)
@@ -678,7 +678,7 @@
   function _drawPlusCircle2(itemExtended, ctx) {
     return drawPlusCircle.call(this, itemExtended, ctx);
   }
-  _defineProperty(ImageLens, "version", '1.0.0');
+  _defineProperty(ImageLens, "version", '1.0.1');
 
   // @ts-ignore
   ImageLens.default = ImageLens;
