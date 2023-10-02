@@ -1,0 +1,35 @@
+{
+	"name": "image-lens",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": "Viktor Kirillov (https://kirillovmr.com)",
+	"types": "image-lens.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kirillovmr/image-lens.git"
+	},
+	"homepage": "https://github.com/kirillovmr/image-lens#readme",
+	"scripts": {
+		"dev": "vite sandbox",
+		"build": "zx tools/build.mjs"
+	},
+	"prettier": {
+		"printWidth": 120,
+		"semi": false,
+		"singleQuote": true,
+		"quoteProps": "consistent",
+		"tabWidth": 4,
+		"useTabs": true,
+		"trailingComma": "es5"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kirillovmr/image-lens/issues"
+	},
+	"devDependencies": {
+		"rollup": "^3.29.4",
+		"vite": "^4.4.9",
+		"zx": "^7.2.3"
+	}
+}

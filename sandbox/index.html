@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ImageLens Sandbox</title>
+	</head>
+
+	<body>
+		<!-- <img id="image" src="img1.jpeg" alt="" /> -->
+		<div>
+			<img id="image" src="img1.jpeg" alt="" />
+			<div>
+				<p>
+					⚠️ Avoid circle intersections (like in the top left example). To produce a bug - click on the circle
+					within the intercection of another circle
+				</p>
+				<p>
+					I did not find a way to properly handle it, since mouseDown event propagates twice when circles
+					intersect.
+				</p>
+			</div>
+		</div>
+
+		<script type="module">
+			import ImageLens from '../src/index.js'
+
+			window.ImageLens = ImageLens
+			window.il = new ImageLens()
+
+			const canvas = window.il.init(
+				'image',
+				{
+					canvasSizeMultiplier: 1,
+					plusCircleRadius: 15,
+					plusIconWidth: 7,
+					rectangleFrames: 15,
+				},
+				[
+					{
+						item: 'intersect1',
+						pos: {
+							x1: 100,
+							x2: 200,
+							y1: 100,
+							y2: 200,
+						},
+					},
+					{
+						item: 'intersect2',
+						pos: {
+							x1: 110,
+							x2: 210,
+							y1: 100,
+							y2: 200,
+						},
+					},
+					{
+						item: 'ring',
+						pos: {
+							x1: 360,
+							x2: 380,
+							y1: 335,
+							y2: 370,
+						},
+					},
+					{
+						item: 'hat',
+						pos: {
+							x1: 150,
+							x2: 500,
+							y1: 100,
+							y2: 300,
+						},
+					},
+					{
+						item: 'photo lens',
+						pos: {
+							x1: 550,
+							x2: 650,
+							y1: 360,
+							y2: 460,
+						},
+					},
+				]
+			)
+		</script>
+	</body>
+</html>
