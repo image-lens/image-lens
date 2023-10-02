@@ -1,6 +1,6 @@
 /*!
-* ImageLens v1.0.1
-* GitHub: https://github.com/kirillovmr/image-lens#readme
+* ImageLens v1.0.2
+* GitHub: https://github.com/image-lens/image-lens#readme
 * Released under the MIT License.
 * (c) 2023 Viktor Kirillov (https://kirillovmr.com)
 */
@@ -618,9 +618,10 @@
      * @param {string=} imageId Id of the image to initialize ImageLens to
      * @param {Types.ImageLensConfig=} config Config of the ImageLens
      * @param {Types.ImageLensItem[]=} items Array of items to initialize ImageLens with
+     * @param {Types.ImageLensClickCallback=} clickCallback ImageLensItem click callback
      * @returns {HTMLCanvasElement | undefined}
      */
-    init(imageId, config, items) {
+    init(imageId, config, items, clickCallback) {
       if (imageId !== undefined) {
         this.setImageId(imageId);
       }
@@ -637,6 +638,9 @@
       if (_classPrivateFieldGet(this, _items) === undefined) {
         console.warn('ImageLens: No items provided. Either set them with setItems() or pass them to init()');
         return undefined;
+      }
+      if (clickCallback !== undefined) {
+        this.setClickCallback(clickCallback);
       }
       const canvas = _classPrivateMethodGet(this, _replaceImageWithCanvas, _replaceImageWithCanvas2).call(this, imageId);
       if (canvas === undefined) return this;
@@ -678,7 +682,7 @@
   function _drawPlusCircle2(itemExtended, ctx) {
     return drawPlusCircle.call(this, itemExtended, ctx);
   }
-  _defineProperty(ImageLens, "version", '1.0.1');
+  _defineProperty(ImageLens, "version", '1.0.2');
 
   // @ts-ignore
   ImageLens.default = ImageLens;

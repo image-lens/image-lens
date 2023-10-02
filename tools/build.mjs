@@ -13,7 +13,14 @@ await fs.writeFile(
 
 // replace v%d.%d.%d in README.md
 const readmeMd = await fs.readFile('README.md', 'utf8')
-await fs.writeFile('README.md', readmeMd.replace(/v\d+\.\d+\.\d+/m, `v${packageJson.version}`))
+let newReadmeMd = readmeMd.replace(/v\d+\.\d+\.\d+/m, `v${packageJson.version}`)
+
+// replace jsDelivr version in README.md
+newReadmeMd = readmeMd.replace(
+	/<script src="https:\/\/cdn\.jsdelivr\.net\/.+"><\/script>/m,
+	`<script src="https://cdn.jsdelivr.net/gh/image-lens/image-lens@v${packageJson.version}/dist/ImageLens.min.js"></script>`
+)
+await fs.writeFile('README.md', newReadmeMd)
 echo``
 
 echo`1. Build JS ...`

@@ -1,6 +1,6 @@
 {
 	"name": "image-lens",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
 	"main": "dist/ImageLens.js",
 	"browser": "dist/ImageLens.min.js",
@@ -8,9 +8,9 @@
 	"types": "ImageLens.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kirillovmr/image-lens.git"
+		"url": "https://github.com/image-lens/image-lens.git"
 	},
-	"homepage": "https://github.com/kirillovmr/image-lens#readme",
+	"homepage": "https://github.com/image-lens/image-lens#readme",
 	"scripts": {
 		"dev": "vite sandbox",
 		"build": "zx tools/build.mjs",
@@ -27,7 +27,7 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/kirillovmr/image-lens/issues"
+		"url": "https://github.com/image-lens/image-lens/issues"
 	},
 	"devDependencies": {
 		"@babel/preset-env": "^7.22.20",

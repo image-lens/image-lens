@@ -8,7 +8,6 @@
 
 	<body>
 		<div>
-			<img id="image" src="img1.jpeg" alt="" />
 			<div>
 				<p>
 					⚠️ Avoid circle intersections (like in the top left example). To produce a bug - click on the circle
@@ -19,13 +18,14 @@
 					intersect.
 				</p>
 			</div>
+			<img id="image" src="img1.jpeg" alt="" />
 		</div>
 
-		<script src="./ImageLens.min.js"></script>
+		<!-- <script src="./ImageLens.min.js"></script> -->
 
 		<script type="module">
-			// import ImageLens from '../src/index.js'
-			// window.ImageLens = ImageLens
+			import ImageLens from '../src/index.js'
+			window.ImageLens = ImageLens
 
 			window.il = new ImageLens()
 
@@ -114,7 +114,12 @@
 							y2: 460,
 						},
 					},
-				]
+				],
+
+				// Click callback
+				(item) => {
+					console.log('Click:', item)
+				}
 			)
 		</script>
 	</body>

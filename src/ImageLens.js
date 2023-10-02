@@ -3,7 +3,7 @@ import * as privateMethods from './ImageLensPrivate'
 import * as handlers from './ImageLensHandlers'
 
 export class ImageLens {
-	static version = '1.0.1'
+	static version = '1.0.2'
 
 	/** @type {string} Id of the image to initialize ImageLens to */
 	#imageId
@@ -150,9 +150,10 @@ export class ImageLens {
 	 * @param {string=} imageId Id of the image to initialize ImageLens to
 	 * @param {Types.ImageLensConfig=} config Config of the ImageLens
 	 * @param {Types.ImageLensItem[]=} items Array of items to initialize ImageLens with
+	 * @param {Types.ImageLensClickCallback=} clickCallback ImageLensItem click callback
 	 * @returns {HTMLCanvasElement | undefined}
 	 */
-	init(imageId, config, items) {
+	init(imageId, config, items, clickCallback) {
 		if (imageId !== undefined) {
 			this.setImageId(imageId)
 		}
@@ -171,6 +172,10 @@ export class ImageLens {
 		if (this.#items === undefined) {
 			console.warn('ImageLens: No items provided. Either set them with setItems() or pass them to init()')
 			return undefined
+		}
+
+		if (clickCallback !== undefined) {
+			this.setClickCallback(clickCallback)
 		}
 
 		const canvas = this.#replaceImageWithCanvas(imageId)
