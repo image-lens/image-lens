@@ -30,13 +30,44 @@
 			window.il = new ImageLens()
 
 			const canvas = window.il.init(
+				// Id of the image to replace
 				'image',
+
+				// ImageLens settings
 				{
 					canvasSizeMultiplier: 1,
 					plusCircleRadius: 15,
 					plusIconWidth: 7,
 					rectangleFrames: 15,
 				},
+
+				// Full list of settings:
+				/**
+				 * @typedef ImageLensConfig
+				 * Config of the ImageLens
+				 *
+				 * @property {number} canvasSizeMultiplier Multiplier of the canvas size (If set to 2 - canvas size (not canvas dimetions on the page) will be 2x the image size, therefore drawing quality would be 2x better)
+				 *
+				 * @property {string} plusCircleStrokeColor Color of the plus circle stroke
+				 * @property {string} plusCircleStrokeColorHover Color of the plus circle stroke when hovered
+				 * @property {string} plusCircleFillColor Color of the plus circle fill
+				 * @property {string} plusCircleFillColorHover Color of the plus circle fill when hovered
+				 * @property {number} plusCircleRadius Radius of the plus circle
+				 * @property {number} plusCircleLineWidth Width of the plus circle stroke
+				 *
+				 * @property {number} plusIconLineWidth Width of the plus icon stroke
+				 * @property {number} plusIconWidth Number of pixels of the plus icon radius
+				 * @property {string} plusIconStrokeColor Color of the plus icon stroke
+				 * @property {string} plusIconStrokeColorHover Color of the plus icon stroke when hovered
+				 *
+				 * @property {number} rectangleFrames Number of frames for the rectangle to appear
+				 * @property {number} rectangleCircleRadius Corner radius of the rectangle
+				 * @property {number} rectangleSublineLength Length of the subline of the rectangle (lines that go beyond the corner arc)
+				 * @property {string} rectangleStrokeColor Color of the rectangle stroke
+				 * @property {number} rectangleLineWidth Width of the rectangle stroke
+				 */
+
+				// ImageLens items
 				[
 					{
 						item: 'intersect1',
