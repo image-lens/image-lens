@@ -6,6 +6,8 @@ echo`Purge jsdelivr cache...`
 const distFiles = fs.readdirSync('dist')
 const packageJson = JSON.parse(await fs.readFile('package.json'))
 
+await $`curl --silent https://purge.jsdelivr.net/gh/image-lens/image-lens/`
+
 echo` - ${packageJson.version}`
 await $`curl --silent https://purge.jsdelivr.net/gh/image-lens/image-lens@${packageJson.version}/`
 await $`curl --silent https://purge.jsdelivr.net/gh/image-lens/image-lens@v${packageJson.version}/`
