@@ -1,4 +1,4 @@
-# ImageLens v1.0.1
+# ImageLens v1.0.2
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -68,7 +68,7 @@ il.setConfig({
 	rectangleCircleRadius: 10, // Corner radius of the rectangle
 	rectangleSublineLength: 10, // Length of the subline of the rectangle (lines that go beyond the corner arc)
 	rectangleStrokeColor: 'rgba(255, 255, 255, 1)', // Color of the rectangle stroke
-	rectangleLineWidth: 2, // Width of the rectangle strokeÏ
+	rectangleLineWidth: 2, // Width of the rectangle stroke
 })
 ```
 

@@ -16,7 +16,7 @@ const readmeMd = await fs.readFile('README.md', 'utf8')
 let newReadmeMd = readmeMd.replace(/v\d+\.\d+\.\d+/m, `v${packageJson.version}`)
 
 // replace jsDelivr version in README.md
-newReadmeMd = readmeMd.replace(
+newReadmeMd = newReadmeMd.replace(
 	/<script src="https:\/\/cdn\.jsdelivr\.net\/.+"><\/script>/m,
 	`<script src="https://cdn.jsdelivr.net/gh/image-lens/image-lens@v${packageJson.version}/dist/ImageLens.min.js"></script>`
 )
